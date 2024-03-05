@@ -18,6 +18,10 @@ public abstract class AbstractRacer
   String result = super.toString() + "[Name=" + name + ", position=" + position + "]";
   return result;
  }
+ public String getName()
+ {
+    return name; 
+ }
  
     public int getPosition()
     {
@@ -25,6 +29,6 @@ public abstract class AbstractRacer
     }
 public void setPosition(int newPosition)
     {
-        newPosition = position;
+        position = newPosition;
     }   
 }
