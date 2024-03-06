@@ -10,7 +10,7 @@ public class Robot extends AbstractRacer
     public void move()
     {
         int num = (int) Math.random() * 2; 
-        if (num == 0 || num == 1)
+        if (num == 0)
         {
             isBroken = false; 
         }

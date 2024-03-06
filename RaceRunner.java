@@ -3,7 +3,7 @@ public class RaceRunner
 
     public static void main(String [] args)
     {
-        Race race = new Race(50); 
+        Race race = new Race(100); 
         Hare hare = new Hare("hoppy"); 
         Tortoise tort = new Tortoise("dylan"); 
         Robot robot = new Robot("rob"); 
@@ -11,7 +11,7 @@ public class RaceRunner
         race.addRacer(tort); 
         race.addRacer(robot); 
 
-        System.out.println("There are"+ race.getMembers() + "races in the race: "); 
+        System.out.println("There are "+ race.getMembers() + " races in the race: "); 
         System.out.println(race.getConstestants()); 
         
         System.out.println("running the race: on your marks, get set, GO!!!"); 
@@ -23,8 +23,11 @@ public class RaceRunner
             System.out.println(race.toString()); 
             System.out.println(tort.toString()); 
             System.out.println(hare.toString()); 
-            race.raceOver(); 
+            race.update(); 
+            
         }
+        race.raceOver(); 
+        System.out.println("Race is over."); 
         
      
     }
