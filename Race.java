@@ -3,11 +3,13 @@ public class Race
 {
     private ArrayList<AbstractRacer> members; 
     private int DISTANCE; 
+    private boolean win; 
 
     public Race(int distance)
     {
        this.DISTANCE = distance; 
        members = new ArrayList<AbstractRacer>(); 
+       win = false; 
     }
     public void addRacer(AbstractRacer racer)
     {
@@ -15,7 +17,7 @@ public class Race
     }
     public boolean update()
     {
-        boolean win = false; 
+        win = false; 
         for (int i = 0; i < members.size(); i++)
         {
             if (members.get(i).getPosition() >= DISTANCE)
@@ -71,5 +73,13 @@ public class Race
     public int getDistance()
     {
         return DISTANCE; 
+    }
+    public int getMembers()
+    {
+        return members.size() - 1; 
+    }
+    public boolean getWin()
+    {
+        return win; 
     }
 }
