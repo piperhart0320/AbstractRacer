@@ -16,13 +16,10 @@ public class RaceRunner
         
         System.out.println("running the race: on your marks, get set, GO!!!"); 
 
-        race.update();
+        race.update(); 
         while (race.getWin() == false)
         {
-            
             System.out.println(race.toString()); 
-            System.out.println(tort.toString()); 
-            System.out.println(hare.toString()); 
             race.update(); 
             
         }

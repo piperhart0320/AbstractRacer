@@ -76,7 +76,7 @@ public class Race
     }
     public int getMembers()
     {
-        return members.size() - 1; 
+        return members.size(); 
     }
     public boolean getWin()
     {
